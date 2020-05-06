@@ -4,26 +4,90 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Tic Tac Toe</title>
   <header></header>
-  <body>
+  <body style="text-align: center;">
     <table>
       <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
+        <td
+          style="
+            border-right: 0.05em solid black;
+            border-bottom: 0.05em solid black;
+            padding: 1em;
+          "
+          id="one"
+          onclick="myFunction(id)"
+        ></td>
+        <td
+          style="
+            border-right: 0.05em solid black;
+            border-bottom: 0.05em solid black;
+            padding: 1em;
+          "
+          id="two"
+          onclick="myFunction(id)"
+        ></td>
+        <td
+          style="border-bottom: 0.05em solid black; padding: 1em;"
+          id="three"
+          onclick="myFunction(id)"
+        ></td>
       </tr>
 
       <tr>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
+        <td
+          style="
+            border-right: 0.05em solid black;
+            border-bottom: 0.05em solid black;
+            padding: 1em;
+          "
+          id="four"
+          onclick="myFunction(id)"
+        ></td>
+        <td
+          style="
+            border-right: 0.05em solid black;
+            border-bottom: 0.05em solid black;
+            padding: 1em;
+          "
+          id="five"
+          onclick="myFunction(id)"
+        ></td>
+        <td
+          style="border-bottom: 0.05em solid black; padding: 1em;"
+          id="six"
+          onclick="myFunction(id)"
+        ></td>
       </tr>
 
       <tr>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
+        <td
+          style="border-right: 0.05em solid black; padding: 1em;"
+          id="seven"
+          onclick="myFunction(id)"
+        ></td>
+        <td
+          style="border-right: 0.05em solid black; padding: 1em;"
+          id="eight"
+          onclick="myFunction(id)"
+        ></td>
+        <td id="nine" onclick="myFunction(id)"></td>
       </tr>
     </table>
+
+    <script>
+      let value = "&#x2715";
+      function myFunction(elementId) {
+        if (elementId !== "clicked") {
+          document.getElementById(elementId).innerHTML = value;
+          document.getElementById(elementId).id = "clicked";
+
+          if (value === "&#x2715") {
+            value = "&#x25cf;";
+          } else {
+            value = "&#x2715";
+          }
+        }
+      }
+    </script>
   </body>
   <footer></footer>
 </head>
