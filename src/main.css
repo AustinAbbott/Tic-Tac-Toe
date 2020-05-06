@@ -13,3 +13,7 @@ padding: 5em;
     border-right: 0.05em solid black; 
     padding: 5em;
 }
+
+.bottomRightCorner {
+    padding: 5em;
+}

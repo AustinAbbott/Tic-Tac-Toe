@@ -3,9 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" type="text/css" href="main.css" />
-  <title>Tic Tac Toe</title>
-  <header></header>
-  <body style="text-align: center;">
+  <title>Tic Tac Nope</title>
+  <header><h1>Tic Tac Nope</h1></header>
+  <body style="text-align: center; max-width: 500px; margin: auto;">
     <table>
       <tr>
         <td class="columns" id="one" onclick="myFunction(id)"></td>
@@ -22,22 +22,25 @@
       <tr>
         <td class="bottomRow" id="seven" onclick="myFunction(id)"></td>
         <td class="bottomRow" id="eight" onclick="myFunction(id)"></td>
-        <td id="nine" onclick="myFunction(id)"></td>
+        <td class="bottomRightCorner" id="nine" onclick="myFunction(id)"></td>
       </tr>
     </table>
 
     <script>
       let value = "&#x2715";
+      let storageObj = {};
+
       function myFunction(elementId) {
-        if (elementId !== "clicked") {
+        if (!storageObj[elementId]) {
           document.getElementById(elementId).innerHTML = value;
-          document.getElementById(elementId).id = "clicked";
 
           if (value === "&#x2715") {
-            value = "&#x25cf;";
+            value = "&#9711;";
           } else {
             value = "&#x2715";
           }
+
+          storageObj[elementId] = value;
         }
       }
     </script>
