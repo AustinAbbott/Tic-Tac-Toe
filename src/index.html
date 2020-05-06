@@ -2,73 +2,26 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
   <title>Tic Tac Toe</title>
   <header></header>
   <body style="text-align: center;">
     <table>
       <tr>
-        <td
-          style="
-            border-right: 0.05em solid black;
-            border-bottom: 0.05em solid black;
-            padding: 1em;
-          "
-          id="one"
-          onclick="myFunction(id)"
-        ></td>
-        <td
-          style="
-            border-right: 0.05em solid black;
-            border-bottom: 0.05em solid black;
-            padding: 1em;
-          "
-          id="two"
-          onclick="myFunction(id)"
-        ></td>
-        <td
-          style="border-bottom: 0.05em solid black; padding: 1em;"
-          id="three"
-          onclick="myFunction(id)"
-        ></td>
+        <td class="columns" id="one" onclick="myFunction(id)"></td>
+        <td class="columns" id="two" onclick="myFunction(id)"></td>
+        <td class="bottom" id="three" onclick="myFunction(id)"></td>
       </tr>
 
       <tr>
-        <td
-          style="
-            border-right: 0.05em solid black;
-            border-bottom: 0.05em solid black;
-            padding: 1em;
-          "
-          id="four"
-          onclick="myFunction(id)"
-        ></td>
-        <td
-          style="
-            border-right: 0.05em solid black;
-            border-bottom: 0.05em solid black;
-            padding: 1em;
-          "
-          id="five"
-          onclick="myFunction(id)"
-        ></td>
-        <td
-          style="border-bottom: 0.05em solid black; padding: 1em;"
-          id="six"
-          onclick="myFunction(id)"
-        ></td>
+        <td class="columns" id="four" onclick="myFunction(id)"></td>
+        <td class="columns" id="five" onclick="myFunction(id)"></td>
+        <td class="bottom" id="six" onclick="myFunction(id)"></td>
       </tr>
 
       <tr>
-        <td
-          style="border-right: 0.05em solid black; padding: 1em;"
-          id="seven"
-          onclick="myFunction(id)"
-        ></td>
-        <td
-          style="border-right: 0.05em solid black; padding: 1em;"
-          id="eight"
-          onclick="myFunction(id)"
-        ></td>
+        <td class="bottomRow" id="seven" onclick="myFunction(id)"></td>
+        <td class="bottomRow" id="eight" onclick="myFunction(id)"></td>
         <td id="nine" onclick="myFunction(id)"></td>
       </tr>
     </table>

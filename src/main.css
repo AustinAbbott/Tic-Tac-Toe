@@ -1,0 +1,15 @@
+.columns {
+border-right: 0.05em solid black;
+border-bottom: 0.05em solid black;
+padding: 5em;
+}
+
+.bottom {
+    border-bottom: 0.05em solid black; 
+    padding: 5em;
+}
+
+.bottomRow {
+    border-right: 0.05em solid black; 
+    padding: 5em;
+}
