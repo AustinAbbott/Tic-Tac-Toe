@@ -5,10 +5,10 @@
   <link rel="stylesheet" type="text/css" href="main.css" />
   <title>Tic Tac Toe</title>
   <header><h1>Tic Tac Toe</h1></header>
-  <body style="text-align: center; max-width: 500px; margin: auto;">
+  <body>
     <table>
-      <tr>
-        <td class="columns" id="one" style="background-color: white" onclick="myFunction(id)"></td>
+      <tr id="rowOne">
+        <td class="columns" id="one" style="background-color: white;" onclick="myFunction(id)"></td>
         <td class="columns" id="two" onclick="myFunction(id)"></td>
         <td class="bottom" id="three" onclick="myFunction(id)"></td>
       </tr>
@@ -29,9 +29,10 @@
     <script>
       let value = "&#x2715";
       let storageObj = {};
+      let roundWon = false;
 
       function myFunction(elementId) {
-        if (!storageObj[elementId]) {
+        if (!storageObj[elementId] && !roundWon) {
           document.getElementById(elementId).innerHTML = value;
 
           if (value === "&#x2715") {
@@ -48,7 +49,7 @@
             document.getElementById('two').style.color = "green";
             document.getElementById('three').style.color = "green";
             alert('you win!')
-            storageObj = {}
+            roundWon = true
           }
 
           if (storageObj['four'] && storageObj['four'] === storageObj['five'] && storageObj['four'] === storageObj['six']) {
@@ -56,6 +57,7 @@
             document.getElementById('five').style.color = "green";
             document.getElementById('six').style.color = "green";
             alert('you win!')
+            roundWon = true
           }
 
           if (storageObj['seven'] && storageObj['seven'] === storageObj['eight'] && storageObj['seven'] === storageObj['nine']) {
@@ -63,6 +65,7 @@
             document.getElementById('eight').style.color = "green";
             document.getElementById('nine').style.color = "green";
             alert('you win!')
+            roundWon = true
           }
 
           // COLUMNS
@@ -71,6 +74,7 @@
             document.getElementById('four').style.color = "green";
             document.getElementById('seven').style.color = "green";
             alert('you win!')
+            roundWon = true
           }
 
           if (storageObj['two'] && storageObj['two'] === storageObj['five'] && storageObj['two'] === storageObj['eight']) {
@@ -78,6 +82,7 @@
             document.getElementById('five').style.color = "green";
             document.getElementById('eight').style.color = "green";
             alert('you win!')
+            roundWon = true
           }
 
           if (storageObj['three'] && storageObj['three'] === storageObj['six'] && storageObj['three'] === storageObj['nine']) {
@@ -85,6 +90,7 @@
             document.getElementById('six').style.color = "green";
             document.getElementById('nine').style.color = "green";
             alert('you win!')
+            roundWon = true
           }
 
           // DIAGONALS
@@ -93,6 +99,7 @@
             document.getElementById('five').style.color = "green";
             document.getElementById('nine').style.color = "green";
             alert('you win!')
+            roundWon = true
           }
 
           if (storageObj['three'] && storageObj['three'] === storageObj['five'] && storageObj['three'] === storageObj['seven']) {
@@ -100,6 +107,11 @@
             document.getElementById('five').style.color = "green";
             document.getElementById('seven').style.color = "green";
             alert('you win!')
+            roundWon = true
+          }
+
+          if (storageObj['one'] && storageObj['two'] && storageObj['three'] && storageObj['four'] && storageObj['five'] && storageObj['six'] && storageObj['seven'] && storageObj['eight'] && storageObj['nine'] && !roundWon) {
+            alert("Tie!")
           }
       }
     </script>

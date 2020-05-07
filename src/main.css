@@ -1,23 +1,30 @@
+body {
+    text-align: center;
+    max-width: 500px; 
+    margin: auto;
+}
+
+
 .columns {
-border-right: 0.5em solid black;
-border-bottom: 0.5em solid black;
-padding: 5em;
-background-color: white;
+  border-right: 0.5em solid black;
+  border-bottom: 0.5em solid black;
+  padding: 5em;
+  background-color: white;
 }
 
 .bottom {
-    border-bottom: 0.5em solid black; 
-    padding: 5em;
-    background-color: white;
+  border-bottom: 0.5em solid black;
+  padding: 5em;
+  background-color: white;
 }
 
 .bottomRow {
-    border-right: 0.5em solid black; 
-    padding: 5em;
-    background-color: white;
+  border-right: 0.5em solid black;
+  padding: 5em;
+  background-color: white;
 }
 
 .bottomRightCorner {
-    padding: 5em;
-    background-color: white;
+  padding: 5em;
+  background-color: white;
 }
