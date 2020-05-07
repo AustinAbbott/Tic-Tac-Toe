@@ -33,7 +33,6 @@
       function myFunction(elementId) {
         if (!storageObj[elementId]) {
           document.getElementById(elementId).innerHTML = value;
-          // document.getElementById(elementId).style.background-color = "red";
 
           if (value === "&#x2715") {
             value = "&#9711;";
@@ -42,6 +41,66 @@
           }
           storageObj[elementId] = value;
         }
+
+      // ROWS
+          if (storageObj['one'] && storageObj['one'] === storageObj['two'] && storageObj['one'] === storageObj['three']) {
+            document.getElementById('one').style.color = "green";
+            document.getElementById('two').style.color = "green";
+            document.getElementById('three').style.color = "green";
+            alert('you win!')
+            storageObj = {}
+          }
+
+          if (storageObj['four'] && storageObj['four'] === storageObj['five'] && storageObj['four'] === storageObj['six']) {
+            document.getElementById('four').style.color = "green";
+            document.getElementById('five').style.color = "green";
+            document.getElementById('six').style.color = "green";
+            alert('you win!')
+          }
+
+          if (storageObj['seven'] && storageObj['seven'] === storageObj['eight'] && storageObj['seven'] === storageObj['nine']) {
+            document.getElementById('seven').style.color = "green";
+            document.getElementById('eight').style.color = "green";
+            document.getElementById('nine').style.color = "green";
+            alert('you win!')
+          }
+
+          // COLUMNS
+          if (storageObj['one'] && storageObj['one'] === storageObj['four'] && storageObj['one'] === storageObj['seven']) {
+            document.getElementById('one').style.color = "green";
+            document.getElementById('four').style.color = "green";
+            document.getElementById('seven').style.color = "green";
+            alert('you win!')
+          }
+
+          if (storageObj['two'] && storageObj['two'] === storageObj['five'] && storageObj['two'] === storageObj['eight']) {
+            document.getElementById('two').style.color = "green";
+            document.getElementById('five').style.color = "green";
+            document.getElementById('eight').style.color = "green";
+            alert('you win!')
+          }
+
+          if (storageObj['three'] && storageObj['three'] === storageObj['six'] && storageObj['three'] === storageObj['nine']) {
+            document.getElementById('three').style.color = "green";
+            document.getElementById('six').style.color = "green";
+            document.getElementById('nine').style.color = "green";
+            alert('you win!')
+          }
+
+          // DIAGONALS
+          if (storageObj['one'] && storageObj['one'] === storageObj['five'] && storageObj['one'] === storageObj['nine']) {
+            document.getElementById('one').style.color = "green";
+            document.getElementById('five').style.color = "green";
+            document.getElementById('nine').style.color = "green";
+            alert('you win!')
+          }
+
+          if (storageObj['three'] && storageObj['three'] === storageObj['five'] && storageObj['three'] === storageObj['seven']) {
+            document.getElementById('three').style.color = "green";
+            document.getElementById('five').style.color = "green";
+            document.getElementById('seven').style.color = "green";
+            alert('you win!')
+          }
       }
     </script>
   </body>
