@@ -4,27 +4,31 @@ body {
     margin: auto;
 }
 
+td {
+  height: 165px;
+  width: 165px;
+}
 
 .columns {
-  border-right: 0.5em solid black;
-  border-bottom: 0.5em solid black;
-  padding: 5em;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
   background-color: white;
+  font-size: 25px;
 }
 
 .bottom {
-  border-bottom: 0.5em solid black;
-  padding: 5em;
+  border-bottom: 5px solid black;
   background-color: white;
+  font-size: 25px;
 }
 
 .bottomRow {
-  border-right: 0.5em solid black;
-  padding: 5em;
+  border-right: 5px solid black;
   background-color: white;
+  font-size: 25px;
 }
 
 .bottomRightCorner {
-  padding: 5em;
   background-color: white;
+  font-size: 25px;
 }
