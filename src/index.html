@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" type="text/css" href="main.css" />
   <title>Tic Tac Toe</title>
-  <header><h1>Tic Tac Toe</h1></header>
+  <header style="padding: 5em;"><h1>Tic Tac Toe</h1></header>
   <body>
     <table>
       <tr id="rowOne">
@@ -12,26 +12,26 @@
           class="columns"
           id="one"
           style="background-color: white;"
-          onclick="myFunction(id)"
+          onclick="playerOne(id)"
         ></td>
-        <td class="columns" id="two" onclick="myFunction(id)"></td>
-        <td class="bottom" id="three" onclick="myFunction(id)"></td>
+        <td class="columns" id="two" onclick="playerOne(id)"></td>
+        <td class="bottom" id="three" onclick="playerOne(id)"></td>
       </tr>
 
       <tr>
-        <td class="columns" id="four" onclick="myFunction(id)"></td>
-        <td class="columns" id="five" onclick="myFunction(id)"></td>
-        <td class="bottom" id="six" onclick="myFunction(id)"></td>
+        <td class="columns" id="four" onclick="playerOne(id)"></td>
+        <td class="columns" id="five" onclick="playerOne(id)"></td>
+        <td class="bottom" id="six" onclick="playerOne(id)"></td>
       </tr>
 
       <tr>
-        <td class="bottomRow" id="seven" onclick="myFunction(id)"></td>
-        <td class="bottomRow" id="eight" onclick="myFunction(id)"></td>
-        <td class="bottomRightCorner" id="nine" onclick="myFunction(id)"></td>
+        <td class="bottomRow" id="seven" onclick="playerOne(id)"></td>
+        <td class="bottomRow" id="eight" onclick="playerOne(id)"></td>
+        <td class="bottomRightCorner" id="nine" onclick="playerOne(id)"></td>
       </tr>
     </table>
 
-    <div id="message"><h2></h2></div>
+    <div id="message" style="padding: 3em; font-size: 25px;"><h2></h2></div>
 
     <script>
       let value = "&#x2715";
@@ -49,118 +49,115 @@
       };
       let roundWon = false;
 
-      function myFunction(elementId) {
+      function playerOne(elementId) {
         if (!storageObj[elementId] && !roundWon) {
           document.getElementById(elementId).innerHTML = value;
           storageObj[elementId] = value;
- 
 
-        if (
-          storageObj["one"] &&
-          storageObj["one"] === storageObj["two"] &&
-          storageObj["one"] === storageObj["three"]
-        ) {
-          document.getElementById("one").style.color = "green";
-          document.getElementById("two").style.color = "green";
-          document.getElementById("three").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else if (
-          storageObj["four"] &&
-          storageObj["four"] === storageObj["five"] &&
-          storageObj["four"] === storageObj["six"]
-        ) {
-          document.getElementById("four").style.color = "green";
-          document.getElementById("five").style.color = "green";
-          document.getElementById("six").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else if (
-          storageObj["seven"] &&
-          storageObj["seven"] === storageObj["eight"] &&
-          storageObj["seven"] === storageObj["nine"]
-        ) {
-          document.getElementById("seven").style.color = "green";
-          document.getElementById("eight").style.color = "green";
-          document.getElementById("nine").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else if (
-          storageObj["one"] &&
-          storageObj["one"] === storageObj["four"] &&
-          storageObj["one"] === storageObj["seven"]
-        ) {
-          document.getElementById("one").style.color = "green";
-          document.getElementById("four").style.color = "green";
-          document.getElementById("seven").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else if (
-          storageObj["two"] &&
-          storageObj["two"] === storageObj["five"] &&
-          storageObj["two"] === storageObj["eight"]
-        ) {
-          document.getElementById("two").style.color = "green";
-          document.getElementById("five").style.color = "green";
-          document.getElementById("eight").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else if (
-          storageObj["three"] &&
-          storageObj["three"] === storageObj["six"] &&
-          storageObj["three"] === storageObj["nine"]
-        ) {
-          document.getElementById("three").style.color = "green";
-          document.getElementById("six").style.color = "green";
-          document.getElementById("nine").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else if (
-          storageObj["one"] &&
-          storageObj["one"] === storageObj["five"] &&
-          storageObj["one"] === storageObj["nine"]
-        ) {
-          document.getElementById("one").style.color = "green";
-          document.getElementById("five").style.color = "green";
-          document.getElementById("nine").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else if (
-          storageObj["three"] &&
-          storageObj["three"] === storageObj["five"] &&
-          storageObj["three"] === storageObj["seven"]
-        ) {
-          document.getElementById("three").style.color = "green";
-          document.getElementById("five").style.color = "green";
-          document.getElementById("seven").style.color = "green";
-          document.getElementById("message").innerHTML = "You win!";
-          roundWon = true;
-        } else {
-          setTimeout(playerTwo(), 5000);
-          console.log("It trying!");
-        }
+          if (
+            storageObj["one"] &&
+            storageObj["one"] === storageObj["two"] &&
+            storageObj["one"] === storageObj["three"]
+          ) {
+            document.getElementById("one").style.color = "green";
+            document.getElementById("two").style.color = "green";
+            document.getElementById("three").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else if (
+            storageObj["four"] &&
+            storageObj["four"] === storageObj["five"] &&
+            storageObj["four"] === storageObj["six"]
+          ) {
+            document.getElementById("four").style.color = "green";
+            document.getElementById("five").style.color = "green";
+            document.getElementById("six").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else if (
+            storageObj["seven"] &&
+            storageObj["seven"] === storageObj["eight"] &&
+            storageObj["seven"] === storageObj["nine"]
+          ) {
+            document.getElementById("seven").style.color = "green";
+            document.getElementById("eight").style.color = "green";
+            document.getElementById("nine").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else if (
+            storageObj["one"] &&
+            storageObj["one"] === storageObj["four"] &&
+            storageObj["one"] === storageObj["seven"]
+          ) {
+            document.getElementById("one").style.color = "green";
+            document.getElementById("four").style.color = "green";
+            document.getElementById("seven").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else if (
+            storageObj["two"] &&
+            storageObj["two"] === storageObj["five"] &&
+            storageObj["two"] === storageObj["eight"]
+          ) {
+            document.getElementById("two").style.color = "green";
+            document.getElementById("five").style.color = "green";
+            document.getElementById("eight").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else if (
+            storageObj["three"] &&
+            storageObj["three"] === storageObj["six"] &&
+            storageObj["three"] === storageObj["nine"]
+          ) {
+            document.getElementById("three").style.color = "green";
+            document.getElementById("six").style.color = "green";
+            document.getElementById("nine").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else if (
+            storageObj["one"] &&
+            storageObj["one"] === storageObj["five"] &&
+            storageObj["one"] === storageObj["nine"]
+          ) {
+            document.getElementById("one").style.color = "green";
+            document.getElementById("five").style.color = "green";
+            document.getElementById("nine").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else if (
+            storageObj["three"] &&
+            storageObj["three"] === storageObj["five"] &&
+            storageObj["three"] === storageObj["seven"]
+          ) {
+            document.getElementById("three").style.color = "green";
+            document.getElementById("five").style.color = "green";
+            document.getElementById("seven").style.color = "green";
+            document.getElementById("message").innerHTML = "You win!";
+            roundWon = true;
+          } else {
+            setTimeout(() => playerTwo(), 500);
+          }
 
-        if (
-          storageObj["one"] &&
-          storageObj["two"] &&
-          storageObj["three"] &&
-          storageObj["four"] &&
-          storageObj["five"] &&
-          storageObj["six"] &&
-          storageObj["seven"] &&
-          storageObj["eight"] &&
-          storageObj["nine"] &&
-          !roundWon
-        ) {
-          document.getElementById("message").innerHTML = "It's a tie!";
+          if (
+            storageObj["one"] &&
+            storageObj["two"] &&
+            storageObj["three"] &&
+            storageObj["four"] &&
+            storageObj["five"] &&
+            storageObj["six"] &&
+            storageObj["seven"] &&
+            storageObj["eight"] &&
+            storageObj["nine"] &&
+            !roundWon
+          ) {
+            document.getElementById("message").innerHTML = "It's a tie!";
+          }
         }
-      }
       }
 
       function playerTwo() {
-        
         let index = Math.floor(Math.random() * (10 - 1)) + 1;
-        
+
         if (
           storageObj["one"] &&
           storageObj["two"] &&
@@ -174,7 +171,7 @@
           !roundWon
         ) {
           document.getElementById("message").innerHTML = "It's a tie!";
-          roundWon = true
+          roundWon = true;
         } else if (storageObj[numberObj[index]]) {
           playerTwo();
         } else {
@@ -262,8 +259,7 @@
           document.getElementById("seven").style.color = "red";
           document.getElementById("message").innerHTML = "You lose!";
           roundWon = true;
-        } 
-
+        }
       }
     </script>
   </body>
